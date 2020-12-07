@@ -618,6 +618,7 @@ cursor: pointer;
 .profile_minphoto {
     display: inline-block;
     width: 40px;
+    min-width: 40px;
     height: 40px;
     border-radius: 100px;
     overflow: hidden;
@@ -675,7 +676,7 @@ cursor: pointer;
     font-weight: 600;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 863px) {
     
     .playlist {
         display: none;
@@ -692,6 +693,39 @@ cursor: pointer;
         grid-template-areas: "video video"
                              "description description"
                              "comments suggestions";
+    }
+    .addmylist_button::after,
+    .share_button::after,
+    .save_button::after,
+    .electronic::after,
+    .rock::after,
+    .a80::after,
+    .rela::after {
+        display: none;
+    }
+    
+    .electronic,
+    .rock,
+    .a80,
+    .rela {
+        font-size: .7em;
+    }
+    
+}
+
+@media screen and (max-width: 660px) {
+    
+    .electronic,
+    .rock,
+    .a80,
+    .rela {
+        display: none;
+    }
+    
+    .descriptions_buttons {
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "add share save .";
     }
     
 }
@@ -711,6 +745,23 @@ cursor: pointer;
         grid-template-areas: "video"
                              "description"
                              "comments";
+    }
+    
+    .description_title h5 {
+        font-size: 1.15em;
+    }
+    
+    .description_views p {
+        font-size: .85em;
+        padding-top: 2%;
+    }
+    
+    .comment_data p {
+        font-size: .8em;
+    }
+    
+    .comment_data span {
+        font-size: .9em;
     }
     
 }
