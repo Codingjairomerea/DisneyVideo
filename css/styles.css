@@ -187,8 +187,9 @@ cursor: pointer;
     padding-right: 15%;
     padding-left: 1%;
     display: grid;
+    border-bottom: 2px solid #b7b7b7;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 2fr 1fr 2fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
     "title title title title title title title  title title title"
     "views views views views views views views views views views "
@@ -224,6 +225,7 @@ cursor: pointer;
     grid-template-columns: repeat(10, 1fr);
     align-items: center;
     justify-items: center;
+    padding-bottom: 1%;
     grid-template-areas: 
     "add add share save . electronic rock a80 rela .";
 }
@@ -243,8 +245,35 @@ cursor: pointer;
     border-width: 0;
     padding: 0;
     padding: 3% 6%;
-    background: linear-gradient(to left, #ff5f96, #fe0d13);
+    background: 
+    linear-gradient(90deg, rgba(254,13,19,1) 0%, rgba(255,95,150,1) 70%);
+    transition: all 0.2s linear;
     cursor: pointer;
+    position: relative;
+}
+
+.addmylist_button::after {
+    content: 'Add my List';
+    top: 190%;
+    bottom: 0;
+    right: 0;
+    left: 7%;
+    width: 0px;
+    height: 30px;
+    color: transparent;
+    background: #707070;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .75em;
+    border-radius: 2.5px;
+    
+}
+
+.addmylist_button:hover::after {
+    width: 90px;
+    color: white;
 }
 
 .addmylist_button:focus,
@@ -255,21 +284,46 @@ cursor: pointer;
     outline: none;
 }
 
-.addmylist_button:hover {
-    background: linear-gradient(to right, #ff5f96, #fe0d13);
-}
+
 
 .share_button {
     display: inline-block;
     grid-area: share;
     text-align: center;
     color: #414b57;
+    position: relative;
+}
+
+.share_button::after {
+    content: 'Share';
+    top: 167%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0px;
+    height: 30px;
+    color: transparent;
+    background: #707070;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .75em;
+    border-radius: 2.5px;
+    
+}
+
+.share_button:hover::after {
+    width: 65px;
+    color: white;
 }
 
 .share_button p {
     color: #414b57;
     font-size: .7em;
 }
+
+
 
 .icon-share,
 .icon-cloud-download {
@@ -281,6 +335,31 @@ cursor: pointer;
     grid-area: save;
     text-align: center;
     color: #414b57;
+    position: relative;
+}
+
+.save_button::after {
+    content: 'Save';
+    top: 167%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0px;
+    height: 30px;
+    color: transparent;
+    background: #707070;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .75em;
+    border-radius: 2.5px;
+    
+}
+
+.save_button:hover::after {
+    width: 65px;
+    color: white;
 }
 
 .none {
@@ -303,6 +382,31 @@ cursor: pointer;
     background-color: #9a55fe;
     color: white;
     cursor: pointer;
+    position: relative;
+}
+
+.electronic::after {
+    content: 'Disney';
+    top: 245%;
+    bottom: 0;
+    right: 0;
+    left: 8%;
+    width: 0px;
+    height: 30px;
+    color: transparent;
+    background: #707070;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .85em;
+    border-radius: 2.5px;
+    
+}
+
+.electronic:hover::after {
+    width: 65px;
+    color: white;
 }
 
 .rock {
@@ -316,6 +420,31 @@ cursor: pointer;
     background-color: #1addbd;
     color: white;
     cursor: pointer;
+    position: relative;
+}
+
+.rock::after {
+    content: 'Pixar';
+    top: 245%;
+    bottom: 0;
+    right: 0;
+    left: 8%;
+    width: 0px;
+    height: 30px;
+    color: transparent;
+    background: #707070;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .85em;
+    border-radius: 2.5px;
+    
+}
+
+.rock:hover::after {
+    width: 65px;
+    color: white;
 }
 
 .a80 {
@@ -329,7 +458,32 @@ cursor: pointer;
     background-color: #e11822;
     color: white;
     cursor: pointer;
+    position: relative;
 }     
+
+.a80::after {
+    content: 'Marvel';
+    top: 245%;
+    bottom: 0;
+    right: 0;
+    left: 8%;
+    width: 0px;
+    height: 30px;
+    color: transparent;
+    background: #707070;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .85em;
+    border-radius: 2.5px;
+    
+}
+
+.a80:hover::after {
+    width: 65px;
+    color: white;
+}
 
 .rela {
     grid-area: rela;
@@ -342,6 +496,31 @@ cursor: pointer;
     background-color: #f53185;
     color: white;
     cursor: pointer;
+    position: relative;
+}
+
+.rela::after {
+    content: 'StarWars';
+    top: 245%;
+    bottom: 0;
+    right: 0;
+    left: 8%;
+    width: 0px;
+    height: 30px;
+    color: transparent;
+    background: #707070;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .85em;
+    border-radius: 2.5px;
+    
+}
+
+.rela:hover::after {
+    width: 65px;
+    color: white;
 }
 
 .comments {
@@ -494,4 +673,44 @@ cursor: pointer;
 
 .description_video p:hover {
     font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .playlist {
+        display: none;
+    }
+    
+    .suggestions {
+        padding-right: 15%;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: auto 150px 1fr;
+        grid-template-areas: "video video"
+                             "description description"
+                             "comments suggestions";
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+    .description {
+        padding-right: 0%;
+        padding-left: 2%;
+    }
+    .suggestions {
+        display: none;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 150px 1fr;
+        grid-template-areas: "video"
+                             "description"
+                             "comments";
+    }
+    
 }
